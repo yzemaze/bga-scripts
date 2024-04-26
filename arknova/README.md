@@ -10,5 +10,5 @@ It should work fine on windows/screens 1920px or wider and with Ark Nova’s lay
 4) Projects on association board: Compacted
 
 ## Screenshot
-![screenshot_userstyle](haggis/img/AN_widescreen.png?raw=true)
+![screenshot_userstyle](/arknova/img/AN_widescreen.png?raw=true)
 (all options activated)
