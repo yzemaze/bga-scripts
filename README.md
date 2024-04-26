@@ -13,7 +13,7 @@ Mostly userscripts and userstyles for boardgamearena.com
 ## Installation
 Open raw-file on github (1) to trigger installation with Stylus (2) or Violentmonkey (3).
 
-![screenshot-install-github.png](/img/screenshot-install-github.png?raw=true)
+![screenshot-install-github-raw.png](/img/screenshot-install-github-raw.png?raw=true)
 
 ![screenshot-install-stylus.png](/img/screenshot-install-stylus.png?raw=true)
 
