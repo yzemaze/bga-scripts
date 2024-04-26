@@ -1,5 +1,5 @@
 # Haggis original artwork
-Replace second edition artwork with cards and card backs from the original edition. Colors of players cards in the log can be configured.
+Replace second edition artwork with cards and card backs from the original edition. Colors of players’ cards in the log can be configured, too.
 
 ## Just show me …
 ![screenshot_board](/haggis/img/screenshot_board.png?raw=true)
