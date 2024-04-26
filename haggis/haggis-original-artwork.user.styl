@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name						BGA Haggis original artwork
+@description		Replaces new card artwork and colors with first edition artwork and colors.
+@version				0.2
+@author					yzemaze
+@namespace			github.com/yzemaze/
+@homepageURL		https://github.com/yzemaze/bga-scripts/
+@supportURL			https://github.com/yzemaze/bga-scripts/
+@updateURL			https://github.com/yzemaze/bga-scripts/raw/master/haggis/haggis-original-artwork.user.styl
+@license				GPLv3
+@preprocessor		stylus
+
+@var	color		rColor 	"red"			red
+@var	color		gColor	"green"		green
+@var	color		bColor	"blue"		blue
+@var	color		yColor	"yellow"	goldenrod
+==/UserStyle== */
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/haggis.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+	.bgagame-haggis
+		#played_card_container .cardspace.card, #myhand .stockitem
+			background-image: url("https://x.boardgamearena.net/data/themereleases/current/games/haggis/230614-2323/img/cards.png") !important
+		.card_back
+			background-image: url("https://x.boardgamearena.net/data/themereleases/current/games/haggis/230614-2323/img/card_back.png")
+		b[style*="#0157a9"]
+			color rColor !important	// 1st edition: red
+		b[style*="#e09e1d"]
+			color gColor !important // 1st edition: darkolivegreen
+		b[style*="#d7334f"]
+			color bColor !important // 1st edition: cornflowerblue
+		b[style*="#8c84bf"]
+			color yColor !important // 1st edition: goldenrod
