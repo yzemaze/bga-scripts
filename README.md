@@ -2,7 +2,7 @@
 Mostly userscripts and userstyles for boardgamearena.com
 
 ## What’s up?
-<a href="custom-styles.user.styl">A leaner game lobby</a> plus other refinements (plain background!) for BGA in general, <a href="game-logs-decluttered.user.styl">decluttered game logs</a> and <a href="replay-with-keys.user.js">keyboard support for replays</a>, additionally spatial improvements for <a href="/arknova">Ark Nova</a> and <a href="/hanamikoji">Hanamikoji</a> as well as original cards for <a href="/haggis">Haggis</a> plus some sorely missed fixes and improvements for <a href="/Carcassonne">Carcassonne</a> as well.
+<a href="custom-styles.user.styl">A leaner game lobby</a> plus other refinements (plain background!) for BGA in general, <a href="game-logs-decluttered.user.styl">decluttered game logs</a> and <a href="replay-with-keys.user.js">keyboard support for replays</a>, additionally spatial improvements for <a href="/arknova">Ark Nova</a> and <a href="/hanamikoji">Hanamikoji</a> as well as original cards for <a href="/haggis">Haggis</a> plus some sorely missed fixes and improvements for <a href="/carcassonne">Carcassonne</a> as well.
 
 ## Prerequisites
 <a href="https://violentmonkey.github.io/">Violentmonkey</a> or the like for .user.js-files. 
