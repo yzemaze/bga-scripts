@@ -1,0 +1,153 @@
+/* ==UserStyle==
+@name						BGA custom styles
+@description		Custom styles for boardgamearena.com especially for wider screens/windows: plain background, condensed lobby, reduced whitespace, higher info density etc. Lobby styles were designed for and tested with tiny icons and might not work well otherwise.
+@version				0.2
+@author					yzemaze
+@namespace			github.com/yzemaze/
+@supportURL			https://github.com/yzemaze/bga-scripts/
+@supportURL			https://github.com/yzemaze/bga-scripts/
+@updateURL			https://github.com/yzemaze/bga-scripts/raw/master/custom-styles.user.styl
+@license				GPLv3
+@preprocessor		stylus
+
+@var	checkbox	bgChange							'Background: plain'							1
+@var	color			bgColor								'… color'												#b3b3a7
+@var	checkbox	pageCondensed					'Pageheader condensed'					1
+@var	checkbox	lobbyCondensed				'Lobby: condensed'							1
+@var	checkbox	lobbyGametableInline	'… gametable details inline'		1
+@var	checkbox	lobbyArenaHide				'… hide cue to Arena'						1
+@var	checkbox	lobbyCannotJoinHide		'… hide cannot join link'				1
+@var	checkbox	ArenaProgressBarHide	'Arena: hide progressbar'				1
+@var	checkbox	tournamentExpand			'Tournament games expanded'			1
+@var	range			tournamentMaxWidth		'… max width'										[1920,1400,3840,10,"px"]
+==/UserStyle== */
+
+@-moz-document domain("boardgamearena.com")
+	if bgChange
+		html
+			background-image none
+			background-color bgColor
+	if pageCondensed
+		#page-content
+			margin-top 5px
+	if tournamentExpand
+		#tournament-module .row:last-child
+			max-width tournamentMaxWidth
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/lobby.*")
+	if lobbyCondensed
+		#pageheaderlobby
+			background none
+			margin 0
+			padding 0
+		/* lobby mode menu */
+		.pageheader_menu_verylarge
+			.pageheader_menu
+				margin-top 0
+				margin-bottom 0
+			.pageheader_mobile_switcher_wrap
+				margin .5%
+			.pageheader_menuitem
+				height 40px
+				min-height 0 !important
+				padding 5px 10px !important
+			.pageheader_big_switch
+				.firstline
+					margin 3px
+				.switcher_zone .fa-caret-down
+					top 5px
+					left 3px
+			.firstline
+				margin-top 5px
+		.secondshortline, .pageheader_big_switch_icon, .pageheader_large_switch_icon
+			display none
+		.pageheader_big_switch_dropdown
+			top 44px
+			width 100%
+
+		/* invite friend menu */
+		#playwithfriends_barcenter
+			z-index 1
+		.tabbed_slider_bar_barcenter
+			background none
+		.tabbed_slider_bar_left, .tabbed_slider_bar_right
+			display none
+		#lobby_invite_friend_zone.visible
+			padding 0 0 5px 0
+			margin -15px 0
+		#lobby_invite_friend_zone h3
+			margin 10px
+		#lobby_friend_list, #lobby_invited_friend_list
+			margin 0
+
+		/* gamelobby */
+		/* use display options tiny icons */
+		#gamelobbyauto
+			margin-top -12px
+		.desktop_version
+			.tiny_verycompactlobby
+				.expandedgame_box_wrap
+					margin-bottom 3px
+					.gametable
+						margin-bottom 2px
+						margin-top 2px
+					.wannaplay_item .wannaplay_gamename
+						top 48px
+						left 6px
+						text-align left
+					.emblemstatus
+						background-position 0 0
+						background-size 30px 18px
+						bottom 10px
+						height 18px
+						right -1px
+						width 30px
+					.gametable_list
+						margin 5px 5px 5px 90px
+					.gametable_newtable .gametable_button_zone
+						margin-top 0px
+				.game_box_image_wrap img
+					width 100%
+				.game_box_mask_content
+					margin-top -13px
+				&.verycompactlobby .expandedgame_box_wrap.game_box_wrap
+					min-height 62px
+
+	/* inline gametable_content */
+	if lobbyGametableInline
+		.gametable_content
+			padding-left 0
+		.gametable_status_open .gametable_content, .gametable_status_asyncopen .gametable_content
+			display flex
+			justify-content space-between
+		.gametable_upper_part
+			order 2
+			margin 4px 0px
+		.gametable_button_zone
+			margin 5px
+		.gametable .players
+			margin 3px
+			flex 1
+		.gametable_colored_indicator
+			display none
+
+	/* hide cue to arena / cannot join games */
+	if lobbyArenaHide
+		div.gametable_list.gametable_list_arenavail.arena_available
+			display none
+	if lobbyCannotJoinHide
+		div.gametable_list.gametable_list_cannotjoin:not(.clear)
+			display none !important
+
+	/* hide arena progress bar and move progress-buble */
+	if ArenaProgressBarHide
+		.desktop_version .season-progress-bar-wrap
+			display none
+		.season-progress-bubble-wrap
+			top -14px
+			left 20% !important
+		.season-progress-bubble
+			width 120%
+		.season-progress-bubble:before,
+		.season-progress-bubble:after
+			content none
