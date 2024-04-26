@@ -1,0 +1,30 @@
+/* ==UserStyle==
+@name						BGA Carcassonne log tiles fix
+@description		fixes wonky tiles in log and places them neatly on the right
+@version				0.2
+@author					yzemaze
+@namespace			github.com/yzemaze/
+@homepageURL		https://github.com/yzemaze/bga-scripts/
+@supportURL			https://github.com/yzemaze/bga-scripts/
+@updateURL			https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/log-tiles-fix.user.styl
+@license				GPLv3
+@preprocessor		stylus
+
+@var		checkbox		tilesRightAligned		"Log: align tiles to the right"		1
+==/UserStyle== */
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/carcassonne.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+	.bgagame-carcassonne
+		.tile_in_log .tile_art
+			background-size 1600% 1000%
+		if tilesRightAligned
+			#logs .tile_in_log
+				position absolute
+				left auto
+				right 32px
+				bottom 28px
+				top auto
+				width auto
+				.tile_art
+					height 28px
+					width 28px

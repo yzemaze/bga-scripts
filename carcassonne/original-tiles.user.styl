@@ -1,0 +1,16 @@
+/* ==UserStyle==
+@name						BGA Carcassonne original tiles
+@description		Replace second edition tiles with first edition ones – no matter which are selected via menu.
+@version				0.1
+@author					yzemaze
+@namespace			github.com/yzemaze/
+@homepageURL		https://github.com/yzemaze/bga-scripts/
+@supportURL			https://github.com/yzemaze/bga-scripts/
+@updateURL			https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/original-tiles.user.styl
+@license				GPLv3
+@preprocessor		stylus
+==/UserStyle== */
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/carcassonne.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+	.bgagame-carcassonne .second_edition
+		background-image: url('https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/img/original-tiles.jpg') !important

@@ -1,0 +1,32 @@
+/* ==UserStyle==
+@name						BGA Carcassonne tile borders
+@description		Change width and color of tile borders.
+@version				0.1
+@author					yzemaze
+@namespace			github.com/yzemaze/
+@homepageURL		https://github.com/yzemaze/bga-scripts/
+@supportURL			https://github.com/yzemaze/bga-scripts/
+@updateURL			https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/tile-borders.user.styl
+@license				GPLv3
+@preprocessor		stylus
+
+@var		range		borderWidth		"Width of tile borders"				[4, 2, 8, 1, "px"]
+@var		color		gBorder				"Color for green borders"			#32cd32
+@var		color		yBorder				"Color for yellow borders"		#f3ff49
+@var		color		rBorder				"Color for red borders"				#ff0000
+@var		color		bBorder				"Color for blue borders"			#0000ff
+@var		color		kBorder				"Color for black borders"			#000000
+==/UserStyle== */
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/carcassonne.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+	.bgagame-carcassonne
+		.tile_last_008000 .tile_border
+			border borderWidth solid gBorder
+		.tile_last_ffa500 .tile_border
+			border borderWidth solid yBorder
+		.tile_last_ff0000 .tile_border
+			border borderWidth solid rBorder
+		.tile_last_0000ff .tile_border
+			border borderWidth solid bBorder
+		.tile_last_000000 .tile_border
+			border borderWidth solid kBorder
