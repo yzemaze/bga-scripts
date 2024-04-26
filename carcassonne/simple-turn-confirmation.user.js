@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BGA Carcassonne simple turn confirmation
-// @description  Use right click to trigger tile placement and no partisan confirmation without mouse movement.
+// @description  Use right click to confirm tile placement and no partisan actions without moving the mouse..
 // @match        https://*.boardgamearena.com/archive/replay/*
 // @match        https://*.boardgamearena.com/*/carcassonne*
 // @icon         https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
