@@ -7,7 +7,6 @@
 // @homepageURL  https://github.com/yzemaze/bga-scripts/tree/main/carcassonne
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/lobby-hide-cce.user.js
-// @updateURL    https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/lobby-hide-cce.user.js
 // @version      0.2
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt

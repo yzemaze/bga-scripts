@@ -7,7 +7,6 @@
 // @homepageURL  https://github.com/yzemaze/bga-scripts/
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
-// @updateURL    https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
 // @version      0.3
 // @author       yzemaze
