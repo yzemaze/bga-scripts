@@ -4,10 +4,10 @@
 // @match        https://*.boardgamearena.com/lobby
 // @icon         https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
 // @namespace    https://github.com/yzemaze/bga-scripts/
-// @homepageURL  https://github.com/yzemaze/bga-scripts/
-// @supportURL   https://github.com/yzemaze/bga-scripts/
-// @downloadURL  https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/lobby-hide-cce.usr.js
-// @updateURL    https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/lobby-hide-cce.usr.js
+// @homepageURL  https://github.com/yzemaze/bga-scripts/carcassonne
+// @supportURL   https://github.com/yzemaze/bga-scripts/issues
+// @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/lobby-hide-cce.usr.js
+// @updateURL    https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/lobby-hide-cce.usr.js
 // @version      0.2
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt

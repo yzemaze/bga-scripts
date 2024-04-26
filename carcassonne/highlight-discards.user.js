@@ -5,10 +5,10 @@
 // @match         https://*.boardgamearena.com/*/carcassonne*
 // @icon          https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
 // @namespace     https://github.com/yzemaze/bga-scripts/
-// @homepageURL   https://github.com/yzemaze/bga-scripts/
-// @supportURL    https://github.com/yzemaze/bga-scripts/
-// @downloadURL   https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/highlight-discards.user.js
-// @updateURL     https://github.com/yzemaze/bga-scripts/raw/master/carcassonne/highlight-discards.user.js
+// @homepageURL   https://github.com/yzemaze/bga-scripts/carcassonne
+// @supportURL    https://github.com/yzemaze/bga-scripts/issues
+// @downloadURL   https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/highlight-discards.user.js
+// @updateURL     https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/highlight-discards.user.js
 // @version       0.3
 // @author        yzemaze
 // @license       GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt

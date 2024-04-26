@@ -2,12 +2,12 @@
 // @name         BGA replay with keys
 // @description  Keyboard support for replays. For keys/shortcuts please see comments in the code or replay-with-keys-shortcuts.txt.
 // @match        https://*.boardgamearena.com/archive/replay/*
+// @icon         https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
 // @namespace    https://github.com/yzemaze/bga-scripts/
 // @homepageURL  https://github.com/yzemaze/bga-scripts/
-// @supportURL   https://github.com/yzemaze/bga-scripts/
-// @downloadURL  https://github.com/yzemaze/bga-scripts/
-// @updateURL    https://github.com/yzemaze/bga-scripts/raw/master/replay-with-keys.user.js
-// @icon         https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
+// @supportURL   https://github.com/yzemaze/bga-scripts/issues
+// @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
+// @updateURL    https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
 // @version      0.3
 // @author       yzemaze
