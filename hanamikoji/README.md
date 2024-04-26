@@ -1,5 +1,4 @@
-# bga-hanamikoji-userstyle
-Userstyle for Hanamikoji on BGA.
+# Hanamikoji userstyle
 
 ## Features
 - reduced whitespace/margins (cf. <a href="https://boardgamearena.com/bug?id=86955">bug 86955</a>)

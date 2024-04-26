@@ -1,4 +1,4 @@
-# bga-arknova-userstyle
+# Ark Nova userstyle
 Userstyle for Ark Nova on boardgamearena.com (BGA) displaying 2 player areas next to each other
 
 ## Prerequisites
