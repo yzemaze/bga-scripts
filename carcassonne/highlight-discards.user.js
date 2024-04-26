@@ -5,7 +5,7 @@
 // @match         https://*.boardgamearena.com/*/carcassonne*
 // @icon          https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
 // @namespace     https://github.com/yzemaze/bga-scripts/
-// @homepageURL   https://github.com/yzemaze/bga-scripts/carcassonne
+// @homepageURL   https://github.com/yzemaze/bga-scripts/tree/main/carcassonne
 // @supportURL    https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL   https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/highlight-discards.user.js
 // @updateURL     https://github.com/yzemaze/bga-scripts/raw/main/carcassonne/highlight-discards.user.js
