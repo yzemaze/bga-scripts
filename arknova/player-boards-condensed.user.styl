@@ -1,0 +1,34 @@
+/* ==UserStyle==
+@name           BGA Ark Nova player boards condensed
+@description    Reduce height of common area, declutter player area.
+@version        0.2
+@author         yzemaze
+@namespace      github.com/yzemaze/
+@homepageURL    https://github.com/yzemaze/bga-scripts/arknova
+@supportURL     https://github.com/yzemaze/bga-scripts/issues
+@updateURL      https://github.com/yzemaze/bga-scripts/raw/main/arknova/player-boards-condensed.user.styl
+@license        GPLv3
+@preprocessor   stylus
+
+@var	checkbox	removeBorders	"Remove Borders from player area (right side)?"		1
+==/UserStyle== */
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/arknova.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+	.bgagame-arknova
+		#right-side-first-part
+			#player_board_config
+				padding 0px 3px
+				#player_config
+					padding-bottom 3px
+					.player_config_row
+						border-bottom none
+						padding 1px
+					#open-scoreboard
+						position absolute
+						left 14px
+						top 12px
+			.player-name svg
+				display none
+			if removeBorders
+				.action-cards-summary, .icons-summary, .icons-summary-row
+					border none !important
