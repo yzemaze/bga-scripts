@@ -1,0 +1,35 @@
+/* ==UserStyle==
+@name						BGA Hanamikoji
+@description		CSS for Hanamikoji on BGA reducing whitespace and fixing waiting_card_zone
+@version				0.3
+@author					yzemaze
+@namespace			github.com/yzemaze/
+@supportURL	    https://github.com/yzemaze/bga-scripts/
+@homepageURL		https://github.com/yzemaze/bga-scripts/
+@updateURL			https://github.com/yzemaze/bga-scripts/raw/master/hanamikoji/bga-hanamikoji.user.styl
+@license				GPLv3
+@preprocessor		stylus
+==/UserStyle== */
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/hanamikoji.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+	.bgagame-hanamikoji
+		#waiting_card_zone
+			position absolute
+			display inline
+		/* #mycard_wrap_playerID */
+		#this_player_block > div:nth-of-type(2)
+			display flex
+			margin auto auto auto 260px
+		#mynothand_wrap, #myreserved_wrap, #mydiscarded_wrap
+			width fit-content
+		#myhand_wrap, #mynothand_wrap
+			margin 5px 15px
+		.geisha_card_wrap
+			height 145px
+			margin 5px auto
+		/* #card_wrap_playerID */
+		#opponent_block > div:nth-of-type(1)
+			 margin -15px 10px auto auto
+		/* #action_wrap_playerID */
+		#opponent_block > div:nth-of-type(2)
+			margin 5px auto auto 10px
