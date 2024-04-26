@@ -7,7 +7,7 @@ Some improvements of BGA’s Carcassonne UI.
 2) <a href="highlight-discards.user.js">Show discarded tiles</a> permanently.
 3) <a href="log-tiles-fix.user.styl">Fix distorted tiles</a> in the log (and if desired align them to the right).
 4) Select <a href="tile-borders.user.styl">border width and colors</a> for last placed tiles.
-5) Add a <a href="starting-player-tag.user.js">starting player icon</a>.
+5) Add a <a href="../starting-player-tag.user.js">starting player icon</a>.
 
 6) Replace second edition tiles everywhere with the <a href="original-tiles.user.styl">original tiles</a>.
 7) <a href="mobile-condensed-playerboards.user.styl">Shrink playerboards on mobile devices</a> or smaller windows (<= 960 px).
