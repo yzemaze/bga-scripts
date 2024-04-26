@@ -11,4 +11,5 @@ It should work fine on windows/screens 1920px or wider and with Ark Nova’s lay
 
 ## Screenshot
 ![screenshot_userstyle](/arknova/img/AN-widescreen.png?raw=true)
+
 (all options activated)

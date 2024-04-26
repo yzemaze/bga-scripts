@@ -15,6 +15,7 @@
 ## Prerequisites
 <a href="https://violentmonkey.github.io/">Violentmonkey</a> or the like for .user.js-files. <a href="/highlight-discard.user.js">highlight-discard.user.js</a> has a tiny config section. Please edit the discard string according to the language you use on BGA.
 <a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply .user.styl-files. Config is done within Stylus:
+
 ![screenshot-stylus.png](/carcassonne/img/screenshot-stylus.png?raw=true)
 
 ## Problems? Ideas?

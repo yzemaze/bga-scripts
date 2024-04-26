@@ -17,7 +17,9 @@ It should work fine on windows/screens 1280px or wider and with "Player area pos
 … with exactly the same dimensions. (Please just ignore the grey background. I use it everywhere on BGA.)
 
 Beta published on BGA 2023/04/23
+
 ![screenshot-org](/hanamikoji/img/screenshot-org.png?raw=true)
 
-With my .user.styl activated:
+With .user.styl activated
+
 ![screenshot-userstyle](/hanamikoji/img/screenshot-userstyle.png?raw=true)

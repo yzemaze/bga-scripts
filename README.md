@@ -7,6 +7,7 @@ Mostly userscripts and userstyles for boardgamearena.com
 ## Prerequisites
 <a href="https://violentmonkey.github.io/">Violentmonkey</a> or the like for .user.js-files. 
 <a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply .user.styl-files. Config is done within Stylus:
+
 ![screenshot-stylus.png](/img/screenshot-stylus.png?raw=true)
 
 ## Problems? Ideas?

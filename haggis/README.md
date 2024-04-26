@@ -6,6 +6,7 @@ Replace second edition artwork with cards and card backs from the original editi
 
 ## Prerequisites
 <a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply .user.styl-files. Config is done within Stylus:
+
 ![screenshot-stylus.png](/haggis/img/screenshot-stylus.png?raw=true)
 
 ## Problems? Ideas?
