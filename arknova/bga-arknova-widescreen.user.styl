@@ -1,0 +1,99 @@
+/* ==UserStyle==
+@name						BGA Ark Nova widescreen
+@description		Display 2 player areas next to each other, hide action cards below zoo maps etc.
+@namespace			github.com/yzemaze/bga-arknova-widescreen-userstyle/
+@supportURL			https://github.com/yzemaze/bga-arknova-widescreen-userstyle/
+@version				0.2
+@author					yzemaze
+@license				GPLv3
+@preprocessor		stylus
+
+@var	checkbox	hideCardsAreasIcons					'Hide icons above card areas'											1
+@var	checkbox	hideCardsAreasBg						'Hide background of played cards etc.'						1
+@var	checkbox	hideActionCardsBelowZooMap	'Hide action cards below zoo maps'								1
+@var	checkbox	reduceFloatingHandShadow		'Reduce box shadow and margins of floating hand'	1
+==/UserStyle== */
+
+/*
+prerequisites:
+1) screen size >= 1920*1080
+2) Player boards layout: Multiple view
+3) Two columns layout: Enabled
+4) Column sizes & Assocation board scale: adjust the sliders so that the AB fills the available height nicely
+5) Projects on association board: Compacted
+
+Works best with floating collapsible container and rather small card size in hand.
+*/
+
+@-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/arknova.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
+
+	.bgagame-arknova
+		--arkNovaLeftColumnScale 0.63
+		/*--arkNovaAssociationBoardScale 0.53*/
+		--yzScale 1.3
+
+		#arknova-main-container
+			grid-template-columns 35% 15% 35% 15% !important
+			grid-template-rows max-content 1fr !important
+
+			#board-pool-resizable
+				grid-column 1 / span 2
+				height calc(var(--arkNovaLeftColumnScale)*260px*var(--yzScale))
+				width calc(var(--arkNovaLeftColumnScale)*926px*var(--yzScale))
+				#board-pool
+					transform scale(calc(var(--arkNovaLeftColumnScale)*var(--yzScale)))
+					#reputation-track
+						grid-column 1 / span 2
+
+			#association-board-resizable
+				grid-column 3
+				justify-self auto
+
+			.ark-player-board-resizable
+				grid-column 1
+				~ .ark-player-board-resizable
+					grid-column: 3;
+					grid-row: 2;
+					margin 0px
+
+			.player-board-cards
+				grid-column 2
+				margin 3px 5px 0px -10px
+				padding 5px 0
+				--arkNovaZooCardScale 0.3
+				if hideCardsAreasBg
+					background-image none
+					box-shadow none
+				.player-board-inPlay-animals, .player-board-inPlay-sponsors, .player-board-hand, .player-board-scoring-hand
+					height fit-content
+					margin 0px 0px 5px 5px
+					padding 2px
+					width 93%
+					if hideCardsAreasIcons
+						.icon-container
+							display none
+					if hideCardsAreasBg
+						background none
+						border none
+				~ .player-board-cards
+					grid-column 4
+					grid-row 2
+
+			.player-board-action-cards-resizable
+				if hideActionCardsBelowZooMap
+					display none
+				else
+					grid-column 1 / span 2
+					~ .player-board-action-cards-resizable
+						grid-column 3 / span 2
+					if hideCardsAreasBg
+						.player-board-action-cards
+							background-image none
+							box-shadow none
+
+		if reduceFloatingHandShadow
+			#floating-hand-wrapper
+				box-shadow 0 0 4px 1px #000
+				#floating-hand
+					.player-board-hand .ark-card, .player-board-scoring-hand .ark-card
+						margin 1px
