@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BGA replay with keys
-// @description  Keyboard support for replays. For keys/shortcuts please see comments.
+// @description  Keyboard support for replays. For keys/shortcuts please see comments in the code or replay-with-keys-shortcuts.txt.
 // @match        https://*.boardgamearena.com/archive/replay/*
 // @namespace    https://github.com/yzemaze/bga-scripts/
 // @homepageURL  https://github.com/yzemaze/bga-scripts/

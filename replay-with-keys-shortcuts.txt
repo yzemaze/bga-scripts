@@ -1,0 +1,13 @@
+close dialog                  esc
+Game history back to top      ctrl+alt+h
+Show game history             h
+Go back to first move         ctrl+alt+Home
+Next visible change           f
+Next move                     d
+Go to end of game             ctrl+alt+End
+Go to end of game fast        End
+Go to next player's turn      n
+Go to specific move           ctrl+alt+m
+Go to specific move (fast)    m
+Add a comment                 ctrl+alt+c
+Go to next comment            c
