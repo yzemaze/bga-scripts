@@ -12,8 +12,6 @@ Userscripts and userstyles for boardgamearena.com to improve the UI (according t
 <a href="https://violentmonkey.github.io/">Violentmonkey</a> or the like for .user.js-files. 
 <a href="https://github.com/openstyles/stylus#readme">Stylus</a> or some other way to apply .user.styl-files.
 
-![screenshot-stylus-config.png](/img/screenshot-stylus-config.png?raw=true)
-
 ## Installation
 Open raw-file on github (1) to trigger installation with Stylus (2) or Violentmonkey (3). Some styles feature configuration options (4).
 
@@ -22,6 +20,8 @@ Open raw-file on github (1) to trigger installation with Stylus (2) or Violentmo
 ![screenshot-install-stylus.png](/img/screenshot-install-stylus.png?raw=true)
 
 ![screenshot-install-violentmonkey.png](/img/screenshot-install-violentmonkey.png?raw=true)
+
+![screenshot-stylus-config.png](/img/screenshot-stylus-config.png?raw=true)
 
 ## Problems? Ideas?
 All scripts were tested, sometimes even thoroughly. So they should work fine, but might feature rough edges here or there. As I don’t play all games regularly they might even become obsolete or disfunctional over time. So if you encounter any problems please let me know. Either open an issue or contact me on BGA. Same goes if you’d like to see specific improvements.
