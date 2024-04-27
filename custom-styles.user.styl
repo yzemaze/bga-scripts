@@ -37,13 +37,13 @@
 			max-width tournamentMaxWidth
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/.*\?table=.*")
-  if hideNotPlaying
-    a#not_playing_help
-        display none !important
+	if hideNotPlaying
+		a#not_playing_help
+				display none !important
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/translation.*")
-  .translation_block textarea
-    height translationHeight
+	.translation_block textarea
+		height translationHeight
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/lobby.*")
 	if lobbyCondensed
