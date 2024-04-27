@@ -40,11 +40,12 @@ const logObserver = new MutationObserver(() => {
 });
 
 document.addEventListener('readystatechange', event => {
-    if (event.target.readyState === "complete") {
-		const logs = document.getElementById("logs");
-		logObserver.observe(logs, {
-            childList: true,
-        });
-    }
+	if (event.target.readyState === "complete") {
+		if (!document.querySelector(".first_player_token, .show_first_player")) {
+			const logs = document.getElementById("logs");
+			logObserver.observe(logs, {
+				childList: true,
+			});
+		}
+	}
 });
-

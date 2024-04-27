@@ -4,7 +4,7 @@ Userscripts and userstyles for boardgamearena.com to improve the UI (according t
 ## What’s up?
 1) <a href="custom-styles.user.styl">A leaner game lobby</a> plus other refinements (plain background!) for BGA in general
 2) <a href="game-logs-decluttered.user.styl">decluttered game logs</a> (say goodbye to friends’ status spam …)
-3) <a href="starting-player-tag.user.js">starting player tag</a>
+3) <a href="starting-player-tag.user.js">starting player tag</a> (except for games like Hanamikoji where the starting player is already denoted)
 4) <a href="replay-with-keys.user.js">keyboard support for replays</a>
 5) Userstyles and userscripts for <a href="https://github.com/yzemaze/bga-arknova-userstyle">Ark Nova</a>, <a href="https://github.com/yzemaze/bga-carcassonne-scripts">Carcassonne</a>, <a href="https://github.com/yzemaze/bga-hanamikoji-userstyle">Hanamikoji</a> as well as original cards for <a href="https://github.com/yzemaze/bga-haggis-userstyle">Haggis</a> are in other repositories.
 
