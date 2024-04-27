@@ -8,7 +8,7 @@
 // @homepageURL  https://github.com/yzemaze/bga-scripts/
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/starting-player-tag.user.js
-// @version      0.1
+// @version      0.2
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
