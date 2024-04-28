@@ -8,15 +8,17 @@
 // @homepageURL  https://github.com/yzemaze/bga-scripts/
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/starting-player-tag.user.js
-// @version      0.2
+// @version      0.2.1
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
 
 "use strict";
 function getStartPlayerNameFromLog() {
-	for (const log of ['log_0', 'log_1', 'log_2']) {
-		const playerName = document.getElementById(log).querySelector(".playername")?.textContent;
+	const logs = Array.from(document.getElementsByClassName("log_replayable"));
+	logs.reverse();
+	for (const log of logs) {
+		const playerName = log.querySelector(".playername")?.textContent;
 		if (typeof playerName === "string") {
 			return playerName;
 		}
