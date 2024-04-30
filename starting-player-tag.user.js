@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BGA starting player tag
-// @description  Denotes starting player with a little power icon (+ title).
+// @description  Denotes starting player with a little power icon (+ title). It performs fine for live games, but doesn’t work reliably in turn-based games, because sometimes early log messages are missing.
 // @match        https://*.boardgamearena.com/archive/replay/*
 // @match        https://*.boardgamearena.com/*/*table*
 // @icon         https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
@@ -8,7 +8,7 @@
 // @homepageURL  https://github.com/yzemaze/bga-scripts/
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/starting-player-tag.user.js
-// @version      0.2.1
+// @version      0.2.2
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
