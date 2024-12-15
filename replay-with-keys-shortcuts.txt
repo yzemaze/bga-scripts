@@ -11,3 +11,4 @@ Go to specific move           ctrl+alt+m
 Go to specific move (fast)    m
 Add a comment                 ctrl+alt+c
 Go to next comment            c
+Add link to move number       l
