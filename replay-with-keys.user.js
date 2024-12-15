@@ -8,7 +8,7 @@
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
-// @version      0.3
+// @version      0.4
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
@@ -106,7 +106,25 @@ function keyCheck(e) {
 				document.getElementById("popin_askforvalue_dialog_close")?.click();
 				document.getElementById("newArchiveCommentCancel")?.click();
 				break;
+			case 76:
+				// l: add deep link to move-number
+				addLinkToMoveNumber();
 		}
+	}
+}
+
+function addLinkToMoveNumber() {
+  const element = document.getElementById('move_nbr');
+	const move = element.textContent.trim();
+	if (!isNaN(move) && move !== "") {
+		const url = new URL(window.location.href);
+		url.searchParams.set('goto', move);
+		const link = document.createElement('a');
+		link.href = url.toString();
+		link.textContent = move;
+		link.target = '_blank';
+		element.innerHTML = '';
+		element.appendChild(link);
 	}
 }
 
