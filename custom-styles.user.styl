@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name						BGA custom styles
 @description		Custom styles for boardgamearena.com especially for wider screens/windows: plain background, condensed lobby, reduced whitespace, higher info density etc. Lobby styles were designed for and tested with tiny icons and might not work well otherwise.
-@version				0.4
+@version				0.5
 @author					yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-scripts/
@@ -18,9 +18,12 @@
 @var	checkbox	lobbyArenaHide				'… hide cue to Arena'						1
 @var	checkbox	lobbyCannotJoinHide		'… hide cannot join link'				1
 @var	checkbox	ArenaProgressBarHide	'Arena: hide progressbar'				1
+@var	checkbox	generalChatHide				'Hide general chat'							1
 @var	range			chatBoxHeight					'Chatboxes: height'							[700,250,1000,10,"px"]
 @var	checkbox	tournamentExpand			'Tournament games expanded'			1
 @var	range			tournamentMaxWidth		'… max width'										[1920,1400,3840,10,"px"]
+@var  checkbox	eloArenaShow					'Show Elo in Arena games'				1
+@var  checkbox	eloFriendlyShow				'Show Elo in friendly games'		1
 @var	checkbox	userNotPlayingHide		'Hide "this user is not playing" message'	1
 @var	checkbox	tutorialHide				  'Hide tutorial message from replay log'	1
 @var	range			translationHeight			'Translation HQ: textarea height'	[95,60,180,5,"px"]
@@ -37,6 +40,9 @@
 	if tournamentExpand
 		#tournament-module .row:last-child
 			max-width tournamentMaxWidth
+	if generalChatHide
+		#chatwindow_general
+			display none !important
 	.chatwindowlogs
 		height chatBoxHeight
 		top "calc(-1 * %s)" %chatBoxHeight
@@ -47,6 +53,12 @@
 	if userNotPlayingHide
 		a#not_playing_help
 			display none !important
+	if eloArenaShow
+		.arena_mode .player_elo_wrap
+			visibility visible
+	if eloFriendlyShow
+		.training_mode .player_elo_wrap
+			visibility visible
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/translation.*")
 	.translation_block textarea
