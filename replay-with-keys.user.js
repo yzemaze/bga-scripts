@@ -8,7 +8,7 @@
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
-// @version      0.4
+// @version      0.5
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
@@ -67,8 +67,9 @@ function keyCheck(e) {
 					// ctrl+alt+End: Go to end of game
 					document.getElementById("archive_end_game")?.click();
 					document.getElementById("go_to_game_end_slow")?.click();
-				} else if (!keyModifierPressed(e)) {
-					// End: Go to end of game fast
+				} else if (e.ctrlKey) {
+					// ctrl+End: Go to end of game fast
+					// End: Carcassonne fitToDisplayArea()
 					document.getElementById("archive_end_game")?.click();
 					document.getElementById("go_to_game_end_fast")?.click();
 				}
