@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name						BGA game logs decluttered
 @description		Removes friends’ status logs and all other non-essential messages from game logs. Optionally hides tutorial related info from logs in replays.
-@version				0.3
+@version				0.3.1
 @author					yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-scripts/
@@ -10,13 +10,19 @@
 @license				GPLv3
 @preprocessor		stylus
 
-@var	checkbox	hideTutorial		"Hide tutorial info messages"	1
-@var	checkbox	hideSpectators	"Hide spectators"							0
+@var	checkbox	hideLogSpam				"Hide non-essential log messages"	1
+@var	checkbox	hideSpectatorNote	"Hide spectator notification"			1
+@var	checkbox	hideSpectators		"Hide spectators’ box"						0
+@var	checkbox	hideTutorial			"Hide tutorial info messages"			1
 ==/UserStyle== */
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*\?table=.*"), regexp("https://(\w*\.)?boardgamearena.com/archive/replay/.*")
-	#logs > .log:not(.log_replayable)
-		display none !important
+	if hideLogSpam
+		#logs > .log:not(.log_replayable)
+			display none !important
+	if hideSpectatorNote
+		.player-board.spectator-mode
+			display none
 	if hideSpectators
 		#spectatorbox_wrapper
 			display none
