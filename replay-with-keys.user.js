@@ -8,7 +8,7 @@
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
-// @version      0.5
+// @version      0.5.1
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
@@ -74,9 +74,10 @@ function keyCheck(e) {
 					document.getElementById("go_to_game_end_fast")?.click();
 				}
 				break;
+			case 88:
 			case 78:
 				if (!keyModifierPressed(e)) {
-					// n: Go to next player's turn
+					// x or n: Go to next player's turn
 					document.getElementById("archive_end_game")?.click();
 					document.getElementById("go_to_new_turn")?.click();
 				}
