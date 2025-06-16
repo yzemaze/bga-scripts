@@ -5,7 +5,7 @@ Go back to first move         ctrl+alt+Home
 Next visible change           f
 Next move                     d
 Go to end of game             ctrl+alt+End
-Go to end of game fast        ctrl+End
+Go to end of game fast        ctrl+shift+End
 Go to next player's turn      n
 Go to specific move           ctrl+alt+m
 Go to specific move (fast)    m

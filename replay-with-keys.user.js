@@ -8,7 +8,7 @@
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
-// @version      0.5.1
+// @version      0.5.2
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
@@ -25,8 +25,8 @@ function keyModifierPressed(e) {
 function keyCheck(e) {
 	const el = document.activeElement;
 	if (el && (el.tagName.toLowerCase() == 'input' && el.type == 'text' || el.tagName.toLowerCase() == 'textarea')) {
-		switch (e.keyCode) {
-			case 27:
+	switch (e.keyCode) {
+		case 27:
 				// esc: close dialog
 				document.getElementById("popin_askforvalue_dialog_close")?.click();
 				document.getElementById("newArchiveCommentCancel")?.click();
@@ -67,9 +67,9 @@ function keyCheck(e) {
 					// ctrl+alt+End: Go to end of game
 					document.getElementById("archive_end_game")?.click();
 					document.getElementById("go_to_game_end_slow")?.click();
-				} else if (e.ctrlKey) {
-					// ctrl+End: Go to end of game fast
-					// End: Carcassonne fitToDisplayArea()
+				} else if (e.ctrlKey && e.shiftKey) {
+					// ctrl+shift+End: Go to end of game fast
+					// ctrl+End: scrollmap autofit
 					document.getElementById("archive_end_game")?.click();
 					document.getElementById("go_to_game_end_fast")?.click();
 				}
