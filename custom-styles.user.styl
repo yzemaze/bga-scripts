@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name						BGA custom styles
 @description		Custom styles for boardgamearena.com especially for wider screens/windows: plain background, condensed lobby, reduced whitespace, higher info density etc. Lobby styles were designed for and tested with tiny icons and might not work well otherwise.
-@version				0.5
+@version				0.5.2
 @author					yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-scripts/
@@ -11,7 +11,8 @@
 @preprocessor		stylus
 
 @var	checkbox	bgChange							'Background: plain'							1
-@var	color			bgColor								'… color'												#b3b3a7
+@var	color		bgColor								'… color'												#b3b3a7
+@var	color		pbbgColor							'Player boards: background color'												#ebd5bd
 @var	checkbox	pageCondensed					'Pageheader condensed'					1
 @var	checkbox	lobbyCondensed				'Lobby: condensed'							1
 @var	checkbox	lobbyGametableInline	'… gametable details inline'		1
@@ -27,13 +28,19 @@
 @var	checkbox	userNotPlayingHide		'Hide "this user is not playing" message'	1
 @var	checkbox	tutorialHide				  'Hide tutorial message from replay log'	1
 @var	range			translationHeight			'Translation HQ: textarea height'	[95,60,180,5,"px"]
+@var	checkbox	reduceButtonPadding		'Buttons: reduce padding'				1
 ==/UserStyle== */
 
 @-moz-document domain("boardgamearena.com")
+	if reduceButtonPadding
+		.bgabutton
+			padding 4px 8px
 	if bgChange
 		html
 			background-image none
 			background-color bgColor
+		.player-board
+			background-color pbbgColor
 	if pageCondensed
 		#page-content
 			margin-top 5px
