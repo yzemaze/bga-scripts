@@ -69,7 +69,7 @@ function keyCheck(e) {
 					document.getElementById("go_to_game_end_slow")?.click();
 				} else if (e.ctrlKey && e.shiftKey) {
 					// ctrl+shift+End: Go to end of game fast
-					// ctrl+End: scrollmap autofit
+					// ctrl+End is blocked by scrollmap autofit
 					document.getElementById("archive_end_game")?.click();
 					document.getElementById("go_to_game_end_fast")?.click();
 				}
