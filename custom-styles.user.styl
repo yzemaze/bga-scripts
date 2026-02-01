@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name						BGA custom styles
 @description		Custom styles for boardgamearena.com especially for wider screens/windows: plain background, condensed lobby, reduced whitespace, higher info density etc. Lobby styles were designed for and tested with tiny icons and might not work well otherwise.
-@version				0.5.2
+@version				0.5.3
 @author					yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-scripts/
@@ -26,7 +26,9 @@
 @var  checkbox	eloArenaShow					'Show Elo in Arena games'				1
 @var  checkbox	eloFriendlyShow				'Show Elo in friendly games'		1
 @var	checkbox	userNotPlayingHide		'Hide "this user is not playing" message'	1
+@var	checkbox	rankIconHide		'Hide laurel wreath next to rating'	1
 @var	checkbox	tutorialHide				  'Hide tutorial message from replay log'	1
+@var	checkbox	splashscreenHide        'Hide splashscreens (Trophies, Arena progress)'	0
 @var	range			translationHeight			'Translation HQ: textarea height'	[95,60,180,5,"px"]
 @var	checkbox	reduceButtonPadding		'Buttons: reduce padding'				1
 ==/UserStyle== */
@@ -47,14 +49,20 @@
 	if tournamentExpand
 		#tournament-module .row:last-child
 			max-width tournamentMaxWidth
-	if generalChatHide
+    if generalChatHide
 		#chatwindow_general
-			display none !important
-	.chatwindowlogs
+			display none !important  
+    .chatwindowlogs
 		height chatBoxHeight
 		top "calc(-1 * %s)" %chatBoxHeight
 		.chatwindowlogs_zone
 			height chatBoxHeight - 25px
+	if rankIconHide
+		.icon20_rankw
+			display none
+		.gamerank, .gamerank .gamerank_value
+			position relative
+			top 1px
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/.*/.*\?table=.*")
 	if userNotPlayingHide
@@ -66,6 +74,9 @@
 	if eloFriendlyShow
 		.training_mode .player_elo_wrap
 			visibility visible
+	if splashscreenHide
+		#splashedNotifications_overlay
+			display none !important
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/translation.*")
 	.translation_block textarea
