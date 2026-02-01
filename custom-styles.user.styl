@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name						BGA custom styles
 @description		Custom styles for boardgamearena.com especially for wider screens/windows: plain background, condensed lobby, reduced whitespace, higher info density etc. Lobby styles were designed for and tested with tiny icons and might not work well otherwise.
-@version				0.5.3
+@version				0.5.4
 @author					yzemaze
 @namespace			github.com/yzemaze/
 @homepageURL		https://github.com/yzemaze/bga-scripts/
@@ -57,6 +57,9 @@
 		top "calc(-1 * %s)" %chatBoxHeight
 		.chatwindowlogs_zone
 			height chatBoxHeight - 25px
+	if splashscreenHide
+		#splashedNotifications_overlay
+			display none !important
 	if rankIconHide
 		.icon20_rankw
 			display none
@@ -74,9 +77,6 @@
 	if eloFriendlyShow
 		.training_mode .player_elo_wrap
 			visibility visible
-	if splashscreenHide
-		#splashedNotifications_overlay
-			display none !important
 
 @-moz-document regexp("https://(\w*\.)?boardgamearena.com/translation.*")
 	.translation_block textarea
