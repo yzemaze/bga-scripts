@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         BGA replay with keys
 // @description  Keyboard support for replays. For keys/shortcuts please see comments in the code or replay-with-keys-shortcuts.txt.
-// @match        https://*.boardgamearena.com/archive/replay/*
+// @match        https://*.boardgamearena.com/archive/archive/frame.html?*
 // @icon         https://x.boardgamearena.net/data/themereleases/231110-1000/img/logo/logo.png
 // @namespace    https://github.com/yzemaze/bga-scripts/
 // @homepageURL  https://github.com/yzemaze/bga-scripts/
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
-// @version      0.5.2
+// @version      0.5.3
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
@@ -119,7 +119,8 @@ function addLinkToMoveNumber() {
   const element = document.getElementById('move_nbr');
 	const move = element.textContent.trim();
 	if (!isNaN(move) && move !== "") {
-		const url = new URL(window.location.href);
+		// the frame gets its query from the top page, so goto works there
+		const url = new URL(window.top.location.href);
 		url.searchParams.set('goto', move);
 		const link = document.createElement('a');
 		link.href = url.toString();
@@ -130,9 +131,16 @@ function addLinkToMoveNumber() {
 	}
 }
 
-document.addEventListener("readystatechange", event => {
-	if (event.target.readyState === "complete") {
-		document.getElementById("advanced_replay_features").click();
-		document.addEventListener("keydown", keyCheck, true);
+document.addEventListener("keydown", keyCheck, true);
+
+// replay controls are rendered after the load event
+function openAdvancedFeatures() {
+	const advanced = document.getElementById("advanced_replay_features");
+	if (advanced) {
+		observer.disconnect();
+		advanced.click();
 	}
-});
+}
+const observer = new MutationObserver(openAdvancedFeatures);
+observer.observe(document, { childList: true, subtree: true });
+openAdvancedFeatures();
