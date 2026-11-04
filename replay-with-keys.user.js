@@ -8,7 +8,7 @@
 // @supportURL   https://github.com/yzemaze/bga-scripts/issues
 // @downloadURL  https://github.com/yzemaze/bga-scripts/raw/main/replay-with-keys.user.js
 // @grant        none
-// @version      0.5.3
+// @version      0.5.4
 // @author       yzemaze
 // @license      GPL-3.0-or-later; https://www.gnu.org/licenses/gpl-3.0.txt
 // ==/UserScript==
@@ -133,14 +133,12 @@ function addLinkToMoveNumber() {
 
 document.addEventListener("keydown", keyCheck, true);
 
-// replay controls are rendered after the load event
-function openAdvancedFeatures() {
+// BGA connects the click handler some time after rendering the button; the handler hides the button
+const advancedTimer = setInterval(() => {
 	const advanced = document.getElementById("advanced_replay_features");
-	if (advanced) {
-		observer.disconnect();
-		advanced.click();
+	if (advanced?.style.display === "none") {
+		clearInterval(advancedTimer);
+	} else {
+		advanced?.click();
 	}
-}
-const observer = new MutationObserver(openAdvancedFeatures);
-observer.observe(document, { childList: true, subtree: true });
-openAdvancedFeatures();
+}, 250);
